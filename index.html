@@ -29,7 +29,7 @@
     
         /* Hero section */
         .hero-gradient {
-           
+        
             background-size: cover;
             background-position: center;
         }
@@ -78,29 +78,64 @@
 <body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-4">
-                    <img src="LOK8IT.jpg" alt="LOK8IT Logo" class="h-8 w-8">
-                    <span class="text-xl font-bold text-blue-600">LOK8IT</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-10">
-                    <a href="index.html" class="px-4 py-2 text-gray-800 hover:text-blue-800 font-medium">Home</a>
-                    <a href="about.html" class="px-4 py-2 text-gray-800 hover:text-blue-800 font-medium">About</a>
-                    <a href="solutions.html" class="px-4 py-2 text-gray-800 hover:text-blue-800 font-medium">Solutions</a>
-                    <a href="contact.html" class="px-4 py-2 text-gray-800 hover:text-blue-800 font-medium">Contact</a>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <button onclick="toggleLoginModal()" class="px-4 py-2 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">Login</button>
-                    <button onclick="showInstallationOptions()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Get Protected </button>
-                    <button class="md:hidden">
-                        <i data-feather="menu" class="w-6 h-6"></i>
-                    </button>
-                </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-4 md:px-6 py-3">
+        <div class="flex justify-between items-center">
+          
+          <!-- Logo Section -->
+          <div class="flex items-center space-x-3">
+            <img 
+              src="LOK8IT.jpg" 
+              alt="LOK8IT Logo" 
+              class="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 object-contain"
+            >
+            <span class="text-lg sm:text-xl md:text-2xl font-bold text-blue-600">LOK8IT</span>
+          </div>
+  
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-10">
+            <a href="index.html" class="px-4 py-2 text-gray-800 hover:text-blue-800 font-medium">Home</a>
+            <a href="about.html" class="px-4 py-2 text-gray-800 hover:text-blue-800 font-medium">About</a>
+            <a href="solutions.html" class="px-4 py-2 text-gray-800 hover:text-blue-800 font-medium">Solutions</a>
+            <a href="contact.html" class="px-4 py-2 text-gray-800 hover:text-blue-800 font-medium">Contact</a>
+          </div>
+  
+          <!-- Buttons + Mobile Menu Toggle -->
+          <div class="flex items-center space-x-3">
+            <button onclick="toggleLoginModal()" class="hidden md:block px-4 py-2 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">Login</button>
+            <button onclick="showInstallationOptions()" class="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Get Protected</button>
+  
+            <!-- Mobile Menu Icon -->
+            <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
         </div>
+      </div>
+  
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <a href="index.html" class="block px-6 py-2 text-gray-800 hover:bg-blue-50">Home</a>
+        <a href="about.html" class="block px-6 py-2 text-gray-800 hover:bg-blue-50">About</a>
+        <a href="solutions.html" class="block px-6 py-2 text-gray-800 hover:bg-blue-50">Solutions</a>
+        <a href="contact.html" class="block px-6 py-2 text-gray-800 hover:bg-blue-50">Contact</a>
+        <button onclick="toggleLoginModal()" class="block w-full text-left px-6 py-2 text-blue-600 border-t border-gray-100 hover:bg-blue-50">Login</button>
+        <button onclick="showInstallationOptions()" class="block w-full text-left px-6 py-2 text-white bg-blue-600 hover:bg-blue-700">Get Protected</button>
+      </div>
     </nav>
+  
+    <script>
+      // Toggle mobile menu visibility
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+  
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+  </body>
     <!-- Hero Section -->
     <section id="home" class="hero-gradient text-white py-32 relative overflow-hidden">
         <div class="absolute inset-0 z-0"></div>
@@ -518,4 +553,5 @@ function toggleLoginModal() {
 
    
 </body>
+
 </html>
