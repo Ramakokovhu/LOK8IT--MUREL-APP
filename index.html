@@ -26,6 +26,22 @@
             font-family: 'Poppins', sans-serif;
             color: #e5e7eb;
         }
+          /* Tablet adjustments */
+  @media (max-width: 1024px) {
+    body {
+      background-attachment: scroll; /* Fixes performance issues on tablets */
+      background-size: cover;
+      background-position: center top;
+    }
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 640px) {
+    body {
+      background-attachment: scroll;
+      background-size: contain; /* Shows full image on smaller screens */
+      background-position: center;
+    }
     
         /* Hero section */
         .hero-gradient {
@@ -555,3 +571,4 @@ function toggleLoginModal() {
 </body>
 
 </html>
+
