@@ -33,13 +33,16 @@
     }
   }
 
-  /* Mobile adjustments */
-  @media (max-width: 640px) {
-    body {
-      background-attachment: scroll;
-      background-size: contain; 
-      background-position: center;   
-    }
+@media (max-width: 640px) {
+  body {
+    background-attachment: scroll;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+      
+    background-position: center;
+  }
+}
+
     
         /* Hero section */
         .hero-gradient {
@@ -567,6 +570,7 @@ function toggleLoginModal() {
 </body>
 
 </html>
+
 
 
 
