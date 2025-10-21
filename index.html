@@ -33,12 +33,23 @@
           background-repeat: no-repeat;
           background-blend-mode: multiply;
           background-position: center;
-            @media (max-width: 1024px) {
+     /* Tablet view */
+@media (max-width: 1024px) {
   .hero-gradient {
-          background-attachment: scroll; 
-          background-position: center top;
+    background-attachment: scroll; 
+    background-size: cover;
+    background-position: center top;
   }
-        }
+}
+
+/* Mobile view */
+@media (max-width: 640px) {
+  .hero-gradient {
+    background-attachment: scroll; 
+    background-size: cover;        
+    background-position: center;
+  }
+}
     
         /* Glass nav */
         nav.glass-nav {
@@ -558,6 +569,7 @@ function toggleLoginModal() {
 </body>
 
 </html>
+
 
 
 
