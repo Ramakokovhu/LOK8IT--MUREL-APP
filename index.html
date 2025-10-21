@@ -25,22 +25,33 @@
             font-family: 'Poppins', sans-serif;
             color: white;
         }
-          /* Tablet adjustments */
-  @media (max-width: 1024px) {
-    body {
-      background-attachment: scroll;
-      background-size: cover;
-      background-position: center top;
-          background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('LOK8IT.jpg');
-    }
+         
+@media (max-width: 1024px) {
+  body {
+    background-attachment: scroll; /* smoother on tablets */
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+
+    background-image: 
+      linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('LOK8IT-tablet.jpg');
   }
+}
+
 
 @media (max-width: 640px) {
   body {
     background-attachment: scroll;
-    background-size: cover; 
- background-position: center;
-        background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('LOK8IT.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+
+    background-image: 
+      linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('LOK8IT-mobile.jpg');
   }
 }
         /* Hero section */
