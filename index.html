@@ -33,21 +33,21 @@
           background-repeat: no-repeat;
           background-blend-mode: multiply;
           background-position: center;
+            
      /* Tablet view */
 @media (max-width: 1024px) {
   .hero-gradient {
-    background-attachment: scroll; 
-    background-size: cover;
-    background-position: center top;
+    background-size: contain; 
+    background-position: center;
   }
 }
 
 /* Mobile view */
 @media (max-width: 640px) {
   .hero-gradient {
-    background-attachment: scroll; 
-    background-size: cover;        
-    background-position: center;
+    background-size: contain; 
+    background-position: center top;
+    background-attachment: scroll
   }
 }
     
@@ -569,6 +569,7 @@ function toggleLoginModal() {
 </body>
 
 </html>
+
 
 
 
