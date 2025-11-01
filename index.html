@@ -103,7 +103,7 @@
           <div class="flex items-center space-x-3">
             <img 
               src="LOK8IT.jpg" 
-              alt="LOK8IT Logo" 
+              alt="LOK8it Logo" 
               class="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 object-contain"
             >
             <span class="text-lg sm:text-xl md:text-2xl font-bold text-blue-600">LOK8IT</span>
@@ -290,12 +290,6 @@
                         <span class="w-10 h-10 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold text-2xl">
                             R
                           </span>
-                          
-                    </div>
-                    <h3 class="text-xl font-bold mb-2 text-black">Flexible Plans</h3>
-
-                    <p class="text-gray-600">Buy once or subscribe monthly. The choice is yours.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -305,11 +299,11 @@
             <div class="text-center mb-16">
                 <div class="bg-gray-50 p-6 rounded-lg border border-blue-500">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4"> Future Vision</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">As we continue to grow, LOK8IT aims to expand into residential complexes, dealerships, and commercial fleets,ensuring every valuable asset in South Africa can be located, protected, and recovered with ease.</p>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">As we continue to grow, LOK8IT aims to expand into residential complexes, dealerships, and commercial fleets, ensuring every valuable asset in South Africa can be located, protected, and recovered with ease.</p>
                 <div class="flex justify-center mt-6">                 
                 </div>
             </div>
-        </div>
+        </div>mm
     </section>
 
     <!-- Login Modal -->
@@ -492,30 +486,6 @@ function toggleLoginModal() {
             monthlyBtn.classList.remove('bg-blue-600', 'text-white');
         });
 
-        // Watch demo modal
-        const watchDemoBtn = document.getElementById('watchDemoBtn');
-        watchDemoBtn.addEventListener('click', () => {
-            // Create modal
-            const modal = document.createElement('div');
-            modal.className = 'fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4';
-            modal.innerHTML = `
-                <div class="bg-white rounded-xl max-w-4xl w-full overflow-hidden">
-                    <div class="relative pb-[56.25%] h-0 overflow-hidden">
-                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">LOK8IT Installation Demo</h3>
-                        <p class="text-gray-600">See how quick and easy it is to get protected</p>
-                    </div>
-                    <button onclick="this.parentElement.remove()" class="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2">
-                        <i data-feather="x" class="w-6 h-6"></i>
-                    </button>
-                </div>
-            `;
-            document.body.appendChild(modal);
-            feather.replace();
-        });
-
         // Add animations when scrolling
         document.addEventListener('DOMContentLoaded', () => {
             const animateOnScroll = () => {
@@ -571,6 +541,7 @@ function toggleLoginModal() {
 </body>
 
 </html>
+
 
 
 
